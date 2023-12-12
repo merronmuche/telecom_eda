@@ -16,5 +16,6 @@ def connect_to_postgres():
 
     return engine
 
+
 if __name__ == "__main__":
-    print('helloojfaklsjfaskljflasdjflasjlfjaskl')
+    connect_to_postgres()
