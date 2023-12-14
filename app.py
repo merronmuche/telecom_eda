@@ -7,34 +7,26 @@ LOGGER = get_logger(__name__)
 
 def run():
     st.set_page_config(
-        page_title="Hello",
+        page_title="10Academy",
         page_icon="👋",
     )
 
-    st.write("# Welcome to Streamlit! 👋")
+    st.write("# Welcome to my website! 👋")
 
-    st.sidebar.success("Select a demo above.")
+    st.sidebar.success("memo")
 
     df = get_df()
-    st.write(df)
+    # st.write(df)
 
-    st.markdown(
-        """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
-        **👈 Select a demo from the sidebar** to see some examples
-        of what Streamlit can do!
-        ### Want to learn more?
-        - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
-        - Ask a question in our [community
-          forums](https://discuss.streamlit.io)
-        ### See more complex demos
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
-    """
-    )
+    img = st.file_uploader('please upload an image', type = ["jpg","png"])
+    if img is not None:
+        st.image(img)
+
+    muti_select = st.multiselect('what is your fevourite phone?',options= ('apple','samsung','huwawi'))
+    st.write(muti_select)
+
+
+
 
 
 if __name__ == "__main__":
