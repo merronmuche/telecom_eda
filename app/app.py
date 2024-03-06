@@ -1,9 +1,8 @@
 
 import streamlit as st
 from streamlit.logger import get_logger
-from process_data import get_df
+from scripts.process_data import get_df
 import matplotlib.pyplot as plt
-import seaborn as sns 
 
 
 LOGGER = get_logger(__name__)
@@ -45,13 +44,6 @@ def run():
 
         # Display the plot using Streamlit
         st.pyplot(fig)
-
-    
-
-
-   
-
-
 
 
 if __name__ == "__main__":
